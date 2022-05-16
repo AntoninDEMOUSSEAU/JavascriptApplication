@@ -1,7 +1,9 @@
 function getValue(){
     //Fonction permettant d'afficher en temps réelle la valeur de mon input
     realTimeValue();
+    //Fonction permettant de compter le nombre de lettre de la saisie
     count();
+    //Fonction permettant d'inverser les lettres de la saisie
     reverseString()
 
 
@@ -19,7 +21,6 @@ function realTimeValue(){
     //Je vérifie si la value contient déjà un caractere.
     //Si oui, je passe la value à mon nouvelle element P (newP)
     if (valueTV.length <= 1){
-
         newP.textContent=valueTV ;
         document.body.append(newP)
     }
@@ -29,18 +30,17 @@ function realTimeValue(){
         newP.textContent=valueTV ;
         document.body.append(newP)
     }
-
-
 }
 
 function count(){
 
     let newP2 = document.createElement("p");
     newP2.setAttribute("id","compteur");
+    newP2.setAttribute("label", "Le nombre de lettre est : ")
 
     let count = document.getElementById("input").value.length;
     if (count <= 1){
-        newP2.textContent=count
+        newP2.textContent=count;
         document.body.append(newP2)
     } else {
         document.getElementById("compteur").remove();
@@ -57,8 +57,6 @@ function reverseString(){
     let valueRS = document.getElementById("input").value;
     let splitString = valueRS.split("").reverse().join("");
 
-
-
     if (valueRS.length <= 1){
         newP1.textContent=splitString
         document.body.append(newP1)
@@ -67,6 +65,5 @@ function reverseString(){
         newP1.textContent=splitString
         document.body.append(newP1)
     }
-
 
 }
