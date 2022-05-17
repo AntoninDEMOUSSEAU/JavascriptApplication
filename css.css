@@ -1,17 +1,12 @@
+body{
+    background-color: cadetblue;
+    text-align: center;
+}
+
 div{
     border-style: solid;
     padding: 5px;
     margin: 0 auto;
     width: 500px;
 }
-body{
-    background-color: cadetblue;
-    text-align: center;
-}
-p{
-    border-style: solid;
-    padding: 5px;
-    margin: 0 auto ;
-    width: 500px;
-    background-color: cornflowerblue;
-}
+
